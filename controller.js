@@ -247,7 +247,7 @@ exports.getData = (req, res, next) => {
 exports.sendTest = async(req, res, next) => {
   try {
     const message = await client.messages.create({
-      to: ,
+      to: '',
       from: number,
       body: ''
     });
