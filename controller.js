@@ -14,9 +14,7 @@ const log = require('./logger');
 const client = new twilio(accountSid, authToken);
 
 const tempStorage = {
-  people: {
-    '+16314807413': 'Rick'
-  },
+  people: {},
   rating: {},
   pendingRating: {},
   awaitingFeedback: {},
