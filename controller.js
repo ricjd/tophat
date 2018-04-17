@@ -150,7 +150,7 @@ const sendRatingPendingMessage = (message) => {
   return client.messages.create({
     to: message.From,
     from: number,
-    body: `You've already recorded a pulse today, shall I update it?`
+    body: `You've already recorded a pulse today, should I update it?`
   });
 };
 
