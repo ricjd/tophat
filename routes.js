@@ -1,8 +1,7 @@
-'use strict'
+'use strict';
 
 const express = require('express');
 const router = express.Router();
-const log = require('./logger');
 const controller= require('./controller');
 
 const sendSucces = (req, res) => {
@@ -28,4 +27,4 @@ router.post('/receiveMessage',
   sendSucces
 );
 
-module.exports = router
+module.exports = router;
