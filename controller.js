@@ -169,7 +169,7 @@ const sendAlreadyMet = (message) => {
   return client.messages.create({
     to: message.From,
     from: number,
-    body: `I know ${tempStorage.people[message.From]}, we've met already! How's your day going?`
+    body: `I know ${tempStorage.people[message.From]}, we've met already! On a scale from 1 to 5, how's your day going?`
   });
 };
 
@@ -178,14 +178,14 @@ const sendHowsYourDay = (message) => {
   return client.messages.create({
     to: message.From,
     from: number,
-    body: `${tempStorage.people[message.From]}, how's your day going?`
+    body: `${tempStorage.people[message.From]}, on a scale from 1 to 5, how's your day going?`
   });
 };
 
 const sendDontKnowText = (message) => {
   let body;
   if (tempStorage.people[message.From]) {
-    body = `Sorry ${tempStorage.people[message.From]}, I don't know how to do that...`;
+    body = `Sorry ${tempStorage.people[message.From]}, I don't know how to do that. If you meant to log feedback use #notetoself or #otr`;
   } else {
     body = `Sorry, I don't know how to do that. If you meant to log feedback use #notetoself or #otr`;
   }
